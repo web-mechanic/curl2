@@ -1,8 +1,9 @@
 <div id="container">
-
+	<h1>Url Finder</h1>
 	
     <?php echo form_open('urlfinder/ajouter'); ?>
-    
+
+    <h2>Choisissez les informations</h2>
 	<label for="titre">Titre :</label>
 	<input name="titre" type="text" value="<?php echo $title; ?>"><br/>
     
@@ -13,7 +14,7 @@
 	<input type="hidden" name="description" value="<?php echo $description; ?>"/>
 	<h3><?php echo $description; ?></h3>
 	
-	<p>Choisissez une image :</p>
+	<p class="imgChoice">Choisissez une image :</p>
 	<button id="previous">Précédent</button>
 	<ul >
 	    <?php foreach($srcImg as $src): ?>
@@ -23,6 +24,6 @@
 		</li>    
 	    <?php endforeach; ?>
 
-	    <button id="next">Suivant</button>
-	    <input type="submit" value="J'ai choisi !" name="choix"/>
+	    <button id="next">Suivant</button></br>
+	    <input class="okChoice" type="submit" value="J'ai choisi !" name="choix"/>
 	</ul>

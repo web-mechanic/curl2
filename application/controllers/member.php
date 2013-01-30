@@ -23,13 +23,13 @@ class Member extends CI_Controller {
 	
 	public function login()
 	{
-		$this->load->model('M_Member');
+		$this->load->model('M_member');
 		
 		$data['mdp'] = $this->input->post('mdp');
 		$data['email'] = $this->input->post('email');
 
 		
-		$donnees = $this->M_Member->verify($data);
+		$donnees = $this->M_member->verify($data);
 		
 		
 		if( $donnees )

@@ -1,6 +1,6 @@
 <?php
 
-class M_Member extends CI_Model
+class M_member extends CI_Model
 {
 
 	public function verify($data)

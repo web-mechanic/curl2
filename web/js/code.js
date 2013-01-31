@@ -49,4 +49,7 @@ $(function(){
             //ajoute attribut checked avec valeur checked au bouton radio
  $nextImage.children(".selectionner").attr("checked", "checked");
     }
-}); 
+
+});
+
+

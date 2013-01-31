@@ -20,16 +20,18 @@ class Member extends CI_Controller {
 		$this->load->view('layout', $data);
 			
 	}
+
+	
 	
 	public function login()
 	{
-		$this->load->model('M_member');
+		$this->load->model('m_member');
 		
 		$data['mdp'] = $this->input->post('mdp');
 		$data['email'] = $this->input->post('email');
 
 		
-		$donnees = $this->M_member->verify($data);
+		$donnees = $this->m_member->verify($data);
 		
 		
 		if( $donnees )
@@ -37,7 +39,7 @@ class Member extends CI_Controller {
 			$this->session->set_userdata('logged_in', true);
 			$this->session->set_userdata('email', $this->input->post('email'));
 
-			redirect('urlfinder/');
+			redirect('urlfinder/lister');
 		}
 		else
 		{

@@ -1,25 +1,22 @@
 <div id="container">
-	<h1>Url Finder</h1>
+	<h1>Url Picker</h1>
 	
     <?php echo form_open('urlfinder/ajouter'); ?>
 
-    <h2>Choisissez les informations</h2>
-	<label for="titre">Titre :</label>
-	<input name="titre" type="text" value="<?php echo $title; ?>"><br/>
-    
-	<input type="hidden" name="lien" value="<?php echo $lien; ?>"/>
-	<p class="lien"><?php echo $lien; ?></p><br/>
-	
-	<label for="description">Description :</label>
-	<input type="hidden" name="description" value="<?php echo $description; ?>"/>
-	<h3><?php echo $description; ?></h3>
-	
+    <h2>Choisissez les informations pour <?php echo $lien; ?></h2>
+
+	<label class="labelDescr" for="titre">Titre :
+	<input name="titre" type="text" value="<?php echo $title; ?>"></label>
+
+	<label class="labelDescr" for="description">Description :
+	<input type="text" class="textarea" name="description" value="<?php echo $description; ?>"/></label>
+		
 	<p class="imgChoice">Choisissez une image :</p>
 	<button id="previous">Précédent</button>
 	<ul >
 	    <?php foreach($srcImg as $src): ?>
 		<li class="choice">
-		    <label for="img"><?php  echo('<img height="75px" width="75px" src="' . $src . '" />'); ?></label>
+		    <label for="img"><?php  echo('<img height="auto" width="300" src="' . $src . '" />'); ?></label>
 		    <input class="selectionner" type="radio" name="img" value="<?php  echo $src ?>"/>
 		</li>    
 	    <?php endforeach; ?>
@@ -27,3 +24,4 @@
 	    <button id="next">Suivant</button></br>
 	    <input class="okChoice" type="submit" value="J'ai choisi !" name="choix"/>
 	</ul>
+</div>

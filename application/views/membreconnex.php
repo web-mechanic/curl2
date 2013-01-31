@@ -1,4 +1,6 @@
 <div id="containerConnex">
+	
+
 	<h2>Connectez-vous &nbsp;!</h2>
 	<div class="form-wrapper">
 	<?php
@@ -26,6 +28,8 @@
 		echo form_submit('check', 'vérifier');
 		echo form_close();
 	?>
+
 	
 	</div>
-</div>
+
+	

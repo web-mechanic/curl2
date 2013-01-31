@@ -8,11 +8,13 @@
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
-
 	
 	<?php echo $vue;?>
-	
+<div class="footer">
+<footer>	
+<p>If you have something to share, just do it!</p>
+</footer>	
+</div>
 <script src='<?php echo site_url(); ?>web/js/jquery.js'></script>
 	<script src='<?php echo site_url(); ?>web/js/code.js'></script>
 </body>

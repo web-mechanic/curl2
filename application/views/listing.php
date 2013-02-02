@@ -1,4 +1,4 @@
-<div id="container">
+<div class="container">
 	<h1>Url Picker</h1>
 	
     <?php echo form_open('urlfinder/ajouter'); ?>

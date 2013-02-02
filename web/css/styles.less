@@ -209,7 +209,7 @@ body{
   margin-right: 2.5em;
   margin-top: 1em;
 }
-#container{
+.container{
   margin-top: 2.5em;
   width:960px;
   margin: 0 auto;
@@ -309,6 +309,59 @@ margin-top:1em;
   display: inline;
 }
 
+  .signinTitle{
+    width: 69%;
+    margin: 0 auto;
+  }
+footer{
+  text-align: center;
+}
+
+.signinForm{
+  label{
+    display: block;
+  }
+
+  input{
+    margin-bottom: 1em;
+  }
+
+  input[type="password"]{
+    border-radius: 10px;
+    height: 2em;
+    width: 22em;
+    padding-left: 0.3em;
+    margin-top: 0.3em;
+  }
+
+
+  input[type="submit"]{
+  float: right;    
+  border: 1px solid #00748f;
+  height: 42px;
+  width: 100px;
+  padding: 0;
+  cursor: pointer;
+  font: bold 15px Arial, Helvetica;
+  color: #fafafa;
+  text-transform: uppercase;    
+  background-color: #0483a0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#31b2c3), to(#0483a0));
+  background-image: -webkit-linear-gradient(top, #31b2c3, #0483a0);
+  background-image: -moz-linear-gradient(top, #31b2c3, #0483a0);
+  background-image: -ms-linear-gradient(top, #31b2c3, #0483a0);
+  background-image: -o-linear-gradient(top, #31b2c3, #0483a0);
+  background-image: linear-gradient(top, #31b2c3, #0483a0);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;      
+  text-shadow: 0 1px 0 rgba(0, 0 ,0, .3);
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #fff;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #fff;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #fff;
+  }
+}
+
 
 /* =============================================================================
                                 Custom Form
@@ -317,7 +370,7 @@ margin-top:1em;
 .form-wrapper {
   width: 450px;
   padding: 0.5em;
-  margin: 2em auto;
+  margin: 0 auto;
   overflow: hidden;
   border-width: 1px;
   border-style: solid;
@@ -330,6 +383,12 @@ margin-top:1em;
   border-radius: 10px;    
   background-color: #f6f6f6;
   padding-bottom: 1.5em;
+
+  form{
+    margin-bottom: 1em;
+  }
+
+
 
 }
 
@@ -422,7 +481,7 @@ margin-top:1em;
 
 
 
-#containerConnex label{
+.containerConnex label{
 
   height: 1.6em;
   width: 12em;
@@ -436,8 +495,23 @@ margin-top:1em;
 
 }
 
-#containerConnex input:last-of-type{
-    float: right;    
+.containerConnex input[type='password']{
+  border-radius: 10px;
+height: 2em;
+width: 22em;
+padding-left: 0.3em;
+margin-top: 0.3em;
+}
+
+.containerConnex input[type='text']{
+  border-radius: 10px;
+height: 2em;
+width: 22em;
+padding-left: 0.3em;
+margin-top: 0.3em;
+}
+
+.containerConnex input:last-of-type{
   border: 1px solid #00748f;
   height: 42px;
   width: 100px;
@@ -460,17 +534,21 @@ margin-top:1em;
   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #fff;
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #fff;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #fff;
-  margin-top: -5em;
-margin-right: 7em;
+  margin-top: 1em;
 }
 
-#containerConnex .form-wrapper{
-  
-}
-
-#containerConnex{
+.containerConnex{
   margin: 0 auto;
   width: 35%;
+  margin-top: 2.5em;
+  h1{
+    margin-bottom: 0.5em;
+  }
+
+  a{
+    text-decoration: none;
+
+  }
 }
 
 /* ===========================================================================
@@ -502,20 +580,82 @@ margin-top: 4.5em;
 
 
 /* ==|== media queries ======================================================
-   PLACEHOLDER Media Queries for Responsive Design.
-   These override the primary ('mobile first') styles
-   Modify as content requires.
+
    ========================================================================== */
+@media only screen and (max-width: 768px) and (max-width: 959px) {
 
-@media only screen and (min-width: 480px) {
-  /* Style adjustments for viewports 480px and over go here */
+  /*Tablette portrait*/
+.container{
+  width:100%;
+}
+
+.containerConnex {
+margin: 0 auto;
+width: 70%;
+margin-top: 2.5em;
+}
 
 }
 
-@media only screen and (min-width: 768px) {
-  /* Style adjustments for viewports 768px and over go here */
+
+@media only screen and (max-width: 479px) {
+  /* smartphone en mode portrait */
+.signinForm label {
+  display: none;
+}
+
+.container form input[type="text"] {
+width: 100%;
+}
+
+.signinForm input[type="password"] {
+width: 100%;
+}
+
+.signinForm input[type="submit"] {
+float: none;
+}
+.signinTitle {
+text-align: center;
+}
+
+.container h1 {
+margin-top: 0.5em;
+width: 65px;
+height: 95px;
+background: url("../img/logohalf.png");
+}
+
+.container h2 {
+margin-top: 1em;
+}
+
+.containerConnex h1 {
+margin-top: 0.5em;
+width: 65px;
+height: 95px;
+background: url("../img/logohalf.png");
+}
+
+.form-wrapper {
+width: 100%;
+}
+
+.containerConnex input[type="password"] {
+width: 94%;
+}
+
+.containerConnex input[type="text"] {
+width: 94%;
+}
+
+.containerConnex {
+margin-top: 1.5em;
+}
+
 
 }
+
 
 
 /* ==|== print styles =======================================================

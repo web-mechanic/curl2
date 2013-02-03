@@ -13,7 +13,7 @@
 	
 	<label for="description">Description :</label>
 	<input type="hidden" name="description" value="<?php echo $description; ?>"/>
-	<h3><?php echo $description; ?></h3>
+	<p><?php echo $description; ?></p>
 	
 	<p class="imgChoice">Choisissez une image :</p>
 	<button id="previous">Précédent</button>

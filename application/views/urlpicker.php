@@ -3,7 +3,7 @@
 </div>
 
 
-<h1> URL PICKER </h1>
+<a href="<?php echo site_url("urlfinder/lister");?>"><h1> URL PICKER </h1></a>
 
 
 

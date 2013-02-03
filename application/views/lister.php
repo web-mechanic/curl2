@@ -14,13 +14,14 @@
                         <h3>
                             <?php echo $lien->title ?>
                         </h3>
-                        
+                        <p class="lien"> <?php echo anchor(prep_url($lien->url)) ?></p>
                        <div class="imgList"> <?php  echo '<img src="' . $lien->src . '" />' ?> </div>
-                        <p class="lien"> <?php echo anchor(prep_url($lien->url), $lien->title) ?></p>
                         <p><?php echo $lien->desc ?></p>
+
+                        <div class="supmod">
                         <?php echo anchor('urlfinder/supprimer/'.$lien->id, 'Supprimer', array('title'=>'Supprimer ce message','class'=>'delete')) ?>
                         <?php echo anchor('urlfinder/preview/'.$lien->id, 'Modifier', array('title'=>'Modifier ce message')) ?>
-                        
+                        </div>
                     </li>
                 <?php endforeach; ?>
         </form> 

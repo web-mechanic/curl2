@@ -93,7 +93,7 @@ class urlfinder extends CI_Controller {
 			}
 		}
 
-		if (!isset($dataLayout['description'])) $dataLayout['description'] = 'No description found';
+		if (!isset($dataLayout['description'])) $dataLayout['description'] = 'Il n\'y a pas de description :(';
 
 		$this->load->helper('form');
 
